@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+h2 {
+  color: #d34040;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+}
+
+p, h1 {
+  color: #fefbff;
+}
+
+.bg-content::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(29, 29, 29, 0.2), rgba(29, 29, 29, 0.9), #161617), url("img/0af6ce3e-b27a-4722-a5f0-e32af4df3045_what_is_netflix_5_en.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.head {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+.head .button {
+  width: 5rem;
+  height: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.show h1, p {
+  padding: 0.9rem;
+}
+
+.show h1 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.show p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.button {
+  background-color: #b42b2b;
+  border: none;
+  color: #fefbff;
+  border-radius: 5rem;
+}
+
+.button:hover {
+  animation: shrink 0.8s alternate infinite;
+}
+
+.container .button {
+  padding: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.container input {
+  background-color: #353436;
+  border: 1px solid #fefbff;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 5rem;
+  color: #fefbff;
+  cursor: pointer;
+  width: 40rem;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.09);
+  }
+}
+.about {
+  width: 100%;
+  height: 100%;
+  background-color: #161617;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem 5rem;
+}
+
+.about .video iframe {
+  width: 30rem;
+  height: 20rem;
+}
+
+.about .tv-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .container .show h1, p {
+    font-size: 2rem;
+  }
+  .container input {
+    width: 20rem;
+    margin-bottom: 1rem;
+  }
+  .head {
+    padding: 1rem 1rem;
+  }
+  .head h2 {
+    font-size: 1.8rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .video iframe {
+    width: 20rem;
+  }
+  .about .tv-about {
+    margin-top: 4rem;
+    font-size: 1rem;
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  .head {
+    padding: 2rem;
+  }
+  .container .show {
+    padding: 1rem;
+  }
+  .container .show h1, .about .tv-about h1 {
+    font-size: 1.5rem;
+  }
+  .container .show p, .about .tv-about p {
+    font-size: 1rem;
+  }
+  .about .tv-about {
+    width: 20rem;
+  }
+  .about .content .video iframe {
+    width: 20rem;
+    height: 20rem;
+  }
+  .container .show .go {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
