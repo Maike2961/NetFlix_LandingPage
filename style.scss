@@ -121,9 +121,10 @@ p, h1{
 
 .about{
     width: 100%;
-    height: 100%;
     background-color: $black-dark;
     display: flex;
+    flex-direction: column;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
 }
@@ -143,6 +144,26 @@ p, h1{
     height: 20rem;
 }
 
+.about .video img{
+    width: 30rem;
+    height: 20rem;
+    border-radius: 4rem;
+    border: 1px solid $black-light;
+    animation:  anime infinite 5s;
+}
+
+@keyframes anime{
+    0%{
+        box-shadow: 0 0 0 0  $black-light;
+    }
+    50%{
+        box-shadow: 0 0 10px 10px $black-light;
+    }
+    100%{
+        box-shadow: 0 0 0 0 $black-light;
+    }
+}
+
 .about .tv-about{
     display: flex;
     justify-content: center;
@@ -151,7 +172,114 @@ p, h1{
     width: 50rem;
     font-size: 1.6rem;
     text-align: center;
-} 
+}
+
+.box-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $black-dark;
+    padding: 1.5rem 3rem;
+}
+
+.box{
+    background-color: $black-light;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin: .40rem auto;
+}
+
+.box .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.more{
+    width: 5rem;
+    height: 2rem;
+    margin-top: .80rem;
+    cursor: pointer;
+}
+
+.more .one, .more .two{
+    width: 40%;
+    height: 2px;
+    margin: 6px auto;
+    background-color: $white-light;
+    transition: 0.5s;
+}
+
+.more.active{
+    width: 5rem;
+    height: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.more.active .one, .more.active .two{
+    width: 40%;
+    height: 2px;
+    margin: 6px auto;
+    background-color: $white-light;
+    transition: 0.5s;
+}
+
+.more.active .one{
+    transform: rotate(45deg) translate(5px, -13px);;
+}
+
+.more.active .two{
+    transform: rotate(-45deg) translate(20px, -1px);
+}
+
+.box .box-about{
+    overflow: hidden;
+    max-height: 0;
+    color: $white-dark;
+    transition: max-height 0.5s ease;
+}
+
+.box .box-about h3{
+    font-weight: 200;
+}
+
+.feet{
+    width: 100%;
+    background-color: $black-dark;
+    color: $white-dark;
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.feet span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 18pt;
+}
+
+.feet h2{
+    font-size: 18pt;
+}
+
+.feet .back{
+    width: 4rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5rem;
+    background-color: $white-light;
+    transition: 0.5s ease-in;
+}
+
+.feet .back:hover{
+    animation: shrink 8s infinite;
+    background-color: $red-light;
+}
 
 @media screen and (max-width:900px) {
     .container .show h1, p{
@@ -172,7 +300,7 @@ p, h1{
         display: flex;
         flex-direction: column;
     }
-    .content .video iframe{
+    .content .video iframe, .content .video img{
         width: 20rem;
     }
 
@@ -180,6 +308,18 @@ p, h1{
         margin-top: 4rem;
         font-size: 1rem;
         width: 30rem;
+    }
+
+    .feet{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .feet span{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
     }
     
 }
